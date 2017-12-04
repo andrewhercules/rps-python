@@ -37,3 +37,8 @@ def test_set_computer_choice():
     random.seed(0)
     new_rps_game.set_computer_choice()
     assert(new_rps_game.computer_choice == 'paper')
+
+def test_determine_winner():
+    new_rps_game.set_player_choice('scissors')
+    new_rps_game.determine_winner()
+    assert(new_rps_game.winner == 'Player')
