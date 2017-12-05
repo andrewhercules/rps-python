@@ -22,14 +22,15 @@ class RockPaperScissorsGame:
         self.computer_choice = random.choice(self.options)
 
     def determine_winner(self):
+        scenarios = {
+            "rock": "scissors",
+            "paper": "rock",
+            "scissors": "paper"
+        }
         if(self.player_choice == self.computer_choice):
             self.winner += 'draw'
-        elif(self.player_choice == 'rock' and self.computer_choice == 'scissors'):
+        elif(scenarios[self.player_choice] == self.computer_choice):
             self.winner += self.player_name
-        elif(self.player_choice == 'paper' and self.computer_choice == 'rock'):
-            self.winner += self.player_name
-        elif(self.player_choice == 'scissors' and self.computer_choice == 'paper'):
-            self.winner = self.player_name
         else:
             self.winner += 'computer'
         return
