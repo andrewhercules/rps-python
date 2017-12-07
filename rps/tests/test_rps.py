@@ -28,19 +28,16 @@ def test_generate_player_choice_string_scissors():
     assert(new_rps_game.generate_player_choice_string(3) == 'scissors')
 
 def test_set_player_choice_rock():
-    new_rps_game.set_player_choice('rock')
+    new_rps_game.set_player_choice(1)
     assert(new_rps_game.player_choice == 'rock')
 
 def test_set_player_choice_paper():
-    new_rps_game.set_player_choice('paper')
+    new_rps_game.set_player_choice(2)
     assert(new_rps_game.player_choice == 'paper')
 
 def test_set_player_choice_scissors():
-    new_rps_game.set_player_choice('scissors')
+    new_rps_game.set_player_choice(3)
     assert(new_rps_game.player_choice == 'scissors')
-
-def test_set_player_choice_unknown_choice():
-    assert(new_rps_game.set_player_choice('coffee') == "Error!")
 
 def test_set_computer_choice():
     random.seed(0)
@@ -48,6 +45,6 @@ def test_set_computer_choice():
     assert(new_rps_game.computer_choice == 'paper')
 
 def test_determine_winner():
-    new_rps_game.set_player_choice('scissors')
+    new_rps_game.set_player_choice(3)
     new_rps_game.determine_winner()
     assert(new_rps_game.winner == 'Player')

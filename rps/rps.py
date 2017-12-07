@@ -21,12 +21,8 @@ class RockPaperScissorsGame:
         player_choice_as_string = options_dictionary[num]
         return player_choice_as_string
 
-    def set_player_choice(self, player_input_choice):
-        player_choice = player_input_choice.lower()
-        if (player_choice in self.options):
-            self.player_choice = player_choice
-        else:
-            return "Error!"
+    def set_player_choice(self, number):
+        self.player_choice = self.generate_player_choice_string(number)
 
     def set_computer_choice(self):
         self.computer_choice = random.choice(self.options)
