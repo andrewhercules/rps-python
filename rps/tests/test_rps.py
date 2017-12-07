@@ -18,6 +18,15 @@ def test_set_player_name():
     new_rps_game.set_player_name('Player')
     assert(new_rps_game.player_name == 'Player')
 
+def test_generate_player_choice_string_rock():
+    assert(new_rps_game.generate_player_choice_string(1) == 'rock')
+
+def test_generate_player_choice_string_paper():
+    assert(new_rps_game.generate_player_choice_string(2) == 'paper')
+
+def test_generate_player_choice_string_scissors():
+    assert(new_rps_game.generate_player_choice_string(3) == 'scissors')
+
 def test_set_player_choice_rock():
     new_rps_game.set_player_choice('rock')
     assert(new_rps_game.player_choice == 'rock')

@@ -12,6 +12,15 @@ class RockPaperScissorsGame:
     def set_player_name(self, name):
         self.player_name = name
 
+    def generate_player_choice_string(self, num):
+        options_dictionary = {
+            1: "rock",
+            2: "paper",
+            3: "scissors"
+        }
+        player_choice_as_string = options_dictionary[num]
+        return player_choice_as_string
+
     def set_player_choice(self, player_input_choice):
         player_choice = player_input_choice.lower()
         if (player_choice in self.options):
@@ -24,7 +33,7 @@ class RockPaperScissorsGame:
 
     def determine_winner(self):
         scenarios = {
-            "rock": "scissors",
+            "rock":"scissors",
             "paper": "rock",
             "scissors": "paper"
         }
