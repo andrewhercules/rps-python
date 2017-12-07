@@ -13,8 +13,9 @@ class RockPaperScissorsGame:
         self.player_name = name
 
     def set_player_choice(self, player_input_choice):
-        if (player_input_choice in self.options):
-            self.player_choice = player_input_choice
+        player_choice = player_input_choice.lower()
+        if (player_choice in self.options):
+            self.player_choice = player_choice
         else:
             return "Error!"
 
